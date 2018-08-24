@@ -1,0 +1,17 @@
+var routerApp = angular.module('routerApp', ['ui.router']);
+routerApp.config(function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/index.html');
+    $stateProvider
+    .state('signup', {
+        url: 'SignUp',
+        templateUrl: 'signupPage.html'
+    })
+    .state('mycart', {
+        url: 'MyCart',
+        templateUrl: 'mycartPage.html'
+    })
+    .state('login', {
+        url: 'LogIn',
+        templateUrl: 'loginPage.html'
+    });
+});
